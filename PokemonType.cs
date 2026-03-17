@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PokemonBattle
+{
+    public enum PokemonType
+    {
+        Normal = 0,
+        Fire = 1,
+        Water = 2,
+        Grass = 3,
+        Flying = 4,
+        Electric = 5,
+        Poison = 6
+    }
+}
