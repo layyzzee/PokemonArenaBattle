@@ -8,13 +8,14 @@ namespace PokemonBattle
 {
     public enum StatusCondition
     {
-        None,
-        Burn,
-        Paralysis,
-        Poison,
-        Sleep,
-        Confusion,
-        Flinch,
-        Taunt     
+        None = 0,
+        Fainted = 1,
+        Burning = 2,
+        Poison = 4,
+        Confusion = 8,
+        Paralysis = 16,
+        Sleep = 32,
+        Flinch = 64,
+        Taunt = 128
     }
 }
