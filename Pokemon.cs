@@ -17,17 +17,10 @@ namespace PokemonBattle
         public int Defence { get; set; }
         public int Speed { get; set; }
         public List<string> MoveSet { get; set; }
+        public StatusCondition Condition { get; set; } = StatusCondition.None;
 
         //Properties that change mid battle
         public int CurrentHP { get; set; }
-
-        //Status Properties
-        public bool IsFainted;
-        public bool IsBurning;
-        public bool IsPoisoned;
-        public bool IsFrozen;
-        public bool IsDizzy;
-        public bool IsFlying;
 
  
         //Constructor

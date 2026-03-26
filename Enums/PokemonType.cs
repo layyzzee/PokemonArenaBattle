@@ -12,8 +12,17 @@ namespace PokemonBattle.Enums
         Fire = 1,
         Water = 2,
         Grass = 4,
-        Flying = 8,
-        Electric = 16,
-        Poison = 32,    
+        Electric = 8,
+        Ice = 16,
+        Fighting = 32,
+        Poison = 64,
+        Ground = 128,
+        Flying = 256,
+        Psychic = 512,
+        Bug = 1024,
+        Rock = 2048,
+        Ghost = 4096,
+        Dragon = 8192,
+
     }
 }

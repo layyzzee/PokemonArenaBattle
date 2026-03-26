@@ -36,7 +36,7 @@ namespace PokemonBattle
                 while (!validSelection)
                 {
                     Console.WriteLine($"Please choose Pokemon #{i}:");
-                    Console.WriteLine("\n 1. Bulbasaur \n 2. Charmander \n 3. Squirtle \n 4. Pikachu \n 5. Pidgey");
+                    Console.WriteLine("\n 1. Squirtle \n 2. Charmander \n 3. Bulbasaur \n 4. Pikachu \n 5. Pidgey");
 
                     string input = Console.ReadLine();
 
