@@ -7,25 +7,43 @@ using System.Threading.Tasks;
 
 namespace PokemonBattle
 {
-    public class PokemonAllNew
+    public class PokemonData
     {
-        //Moveset unique per pokemon
-        
-
-        // This is your "Master List" of every Pokémon in your game
-        public static readonly List<PokemonSpecies> AllSpecies = new List<PokemonSpecies>
+        // Master List of All Pokemon (Add as required)
+        public static List<PokemonSpecies> AllSpecies = new List<PokemonSpecies>
         {
             new PokemonSpecies {
                 Name = "Squirtle", Type = PokemonType.Water,
-                MaxHP = 44, Attack = 48, Defence = 65, Speed = 43,
-                MoveSet = new List<string> { "Tackle", "Water Gun" }
-        },
+                MaxHP = 54, Attack = 48, Defence = 55, Speed = 43,
+                MoveSet = new List<string> { "Tackle", "Water Gun", "Bubble", "Bite" }
+        
+            },
             new PokemonSpecies {
                 Name = "Charmander", Type = PokemonType.Fire,
-                MaxHP = 39, Attack = 52, Defence = 43, Speed = 65,
-                MoveSet = new List<string> { "Scratch", "Ember" }
-        },
-        // Add as many as you want here!
+                MaxHP = 52, Attack = 64, Defence = 43, Speed = 41,
+                MoveSet = new List<string> { "Scratch", "Ember", "Fire Punch", "Scratch" }
+            },
+
+            new PokemonSpecies
+            {
+                Name = "Bulbasaur", Type = PokemonType.Grass,
+                MaxHP = 62, Attack = 42, Defence = 55, Speed = 41,
+                MoveSet = new List<string> {"Tackle", "Vine Whip", "Slam", "Absorb" }
+            },
+            
+            new PokemonSpecies
+            {
+                Name = "Pikachu", Type = PokemonType.Electric,
+                MaxHP = 50, Attack = 55, Defence = 45, Speed = 50,
+                MoveSet = new List<string> {"Tackle", "Thunder Shock", "Spark", "Scratch" }
+            },
+
+            new PokemonSpecies
+            {
+                Name = "Pidgey", Type = PokemonType.Normal,
+                MaxHP = 43, Attack = 57, Defence = 38, Speed = 62,
+                MoveSet = new List<string> {"Tackle", "Gust", "Wing Attack", "Scratch" }
+            },
     };
 
             // Helper function to find a Pokémon by name
@@ -33,7 +51,7 @@ namespace PokemonBattle
                 => AllSpecies.FirstOrDefault(s => s.Name == name);
 
         //Move List
-        public readonly Dictionary<string, (int Power, PokemonType MoveType, double Drain)> MoveList = new Dictionary<string, (int Power, PokemonType MoveType, double Drain)>
+        public static readonly Dictionary<string, (int Power, PokemonType MoveType, double Drain)> MoveList = new Dictionary<string, (int Power, PokemonType MoveType, double Drain)>
         {
             //Normal
             {"Tackle", (35, PokemonType.Normal, 0)},
@@ -72,8 +90,8 @@ namespace PokemonBattle
             {"Wing Attack", (40, PokemonType.Normal, 0)}
         };
         public List<string> LearnedMoves { get; set; } = new List<string>();
-        public int GetPowerMove(string moveName) => MoveList[moveName].Power;
-        public PokemonType GetMoveType(string moveName) => MoveList[moveName].MoveType;
+        public static int GetPowerMove(string moveName) => MoveList[moveName].Power;
+        public static PokemonType GetMoveType(string moveName) => MoveList[moveName].MoveType;
 
     }
 }

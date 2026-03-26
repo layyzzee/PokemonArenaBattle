@@ -9,15 +9,15 @@ namespace PokemonBattle
     public class TeamBuilder
     {
         //Creating a pokemon getter so new pokemon are selected each time
-        public static Pokemon GetNewPokemon(int choice) => choice switch
+        public static Pokemon GetNewPokemon(int choice)
         {
-            1 => new Bulbasaur(),
-            2 => new Charmander(),
-            3 => new Squirtle(),
-            4 => new Pikachu(),
-            5 => new Pidgey(),
-            _ => new Bulbasaur()
-        };
+            // Adjusting choice (1-5) to index (0-4)
+            var species = PokemonData.AllSpecies[choice - 1];
+
+            // Create a generic Pokemon instance and "map" the data over
+            return new Pokemon(species);
+        }
+
 
         public static List<Pokemon> BuildPlayerTeam()
         {

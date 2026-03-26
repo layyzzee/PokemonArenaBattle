@@ -11,11 +11,12 @@ namespace PokemonBattle
     {
         //Initialising Properties
         public string Name { get; init; }
-        public PokemonType MyType { get; init; }
+        public PokemonType Type { get; init; }
         public int MaxHP { get; set; }        
         public int Attack { get; set; }
         public int Defence { get; set; }
         public int Speed { get; set; }
+        public List<string> MoveSet { get; set; }
 
         //Properties that change mid battle
         public int CurrentHP { get; set; }
@@ -33,12 +34,13 @@ namespace PokemonBattle
         public Pokemon(PokemonSpecies species)
         {
             Name = species.Name;
-            MyType = species.Type;
+            Type = species.Type;
             MaxHP = species.MaxHP;
             CurrentHP = species.MaxHP;
             Attack = species.Attack;
             Defence = species.Defence;
             Speed = species.Speed;
+            MoveSet = species.MoveSet;
         }
     }
 }
