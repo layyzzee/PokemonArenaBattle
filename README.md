@@ -1,3 +1,4 @@
-Welcome to my first terminal game!
-It is a pokemon arena game with a 3v3 battle vs the CPU (randomised inputs)
-It is a project goal to add more QoL features, and also add all 151 gen1 pokemon, but there is no timeline for completion
+Welcome to Pokemon Arena Battle!
+
+To play this, you'll need to either have dotnet, vscode or visual Studio to run it.
+It's just a terminal game, and my goal is to add all gen1 pokemon, and patch any remaining issues / tweak functionality.
